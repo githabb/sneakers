@@ -19,7 +19,7 @@ function Card({ onFavorite, title, imageUrl, price, onPlus }) {
       <h5>{title}</h5>
       <div className="d-flex justify-between align-center">
         <div className="d-flex flex-column">
-          <span>Цена</span>
+          <span>Ціна</span>
           <b>{price} грн</b>
         </div>
 

@@ -1,7 +1,7 @@
-import React from "react";
-import Card from "./components/Card";
-import Header from "./components/Header";
-import Drawer from "./components/Drawer";
+import React from 'react';
+import Card from './components/Card';
+import Header from './components/Header';
+import Drawer from './components/Drawer';
 
 function App() {
   const [items, setItems] = React.useState([]);
@@ -9,7 +9,7 @@ function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
 
   React.useEffect(() => {
-    fetch("https://65b23fcb9bfb12f6eafd44bc.mockapi.io/items")
+    fetch('https://githabb.github.io/data/items.json')
       .then((res) => {
         return res.json();
       })
@@ -30,10 +30,10 @@ function App() {
       <Header onClickCart={() => setCartOpened(true)} />
       <div className="content p-40">
         <div className="d-flex align-center justify-between mb-40">
-          <h1 className="">Все кросовки</h1>
+          <h1 className="">Усі кросівки</h1>
           <div className="search-block d-flex">
             <img src="/img/search.svg" alt="search" />
-            <input placeholder="Поиск..." />
+            <input placeholder="Пошук..." />
           </div>
         </div>
 
@@ -43,7 +43,7 @@ function App() {
               title={item.title}
               price={item.price}
               imageUrl={item.imageUrl}
-              onFavorite={() => console.log("Добавили в закладки")}
+              onFavorite={() => console.log('Додали до закладок')}
               onPlus={(obj) => onAddToCart(obj)}
             />
           ))}
