@@ -13,6 +13,7 @@ function App() {
       .then((res) => {
         return res.json();
       })
+
       .then((json) => {
         setItems(json);
       });
