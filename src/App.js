@@ -18,7 +18,6 @@ function App() {
         setItems(json);
       });
   }, []);
-
   const onAddToCart = (obj) => {
     setCartItems((prev) => [...prev, obj]);
   };
